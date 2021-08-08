@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/loginScreenFragment"
+        android:name="com.gsoft.blogapp.ui.auth.LoginScreenFragment"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreenFragment_to_crearCuentaFragment"
+            app:destination="@id/crearCuentaFragment" />
+        <action
+            android:id="@+id/action_loginScreenFragment_to_profileScreenFragment"
+            app:destination="@id/profileScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/propiedadesScreenFragment"
+        android:name="com.gsoft.blogapp.ui.propiedades.PropiedadesScreenFragment"
+        android:label="fragment_propiedades_screen"
+        tools:layout="@layout/fragment_propiedades_screen" >
+        <action
+            android:id="@+id/action_propiedadesScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_propiedadesScreenFragment_to_detailScreenFragment"
+            app:destination="@id/detailScreenFragment" />
+        <action
+            android:id="@+id/action_propiedadesScreenFragment_to_todasMapa"
+            app:destination="@id/todasMapa" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearCuentaFragment"
+        android:name="com.gsoft.blogapp.ui.crearCuenta.CrearCuentaFragment"
+        android:label="fragment_crear_cuenta"
+        tools:layout="@layout/fragment_crear_cuenta" >
+        <action
+            android:id="@+id/action_crearCuentaFragment_to_profileScreenFragment"
+            app:destination="@id/profileScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.gsoft.blogapp.ui.home.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_loginScreenFragment"
+            app:destination="@id/loginScreenFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_propiedadesScreenFragment"
+            app:destination="@id/propiedadesScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileScreenFragment"
+        android:name="com.gsoft.blogapp.ui.profile.ProfileScreenFragment"
+        android:label="fragment_profile_screen"
+        tools:layout="@layout/fragment_profile_screen" >
+        <action
+            android:id="@+id/action_profileScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_profileScreenFragment_to_agregarPropiedadScreenFragment"
+            app:destination="@id/agregarPropiedadScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarPropiedadScreenFragment"
+        android:name="com.gsoft.blogapp.ui.agregarPropiedad.AgregarPropiedadScreenFragment"
+        android:label="fragment_agregar_propiedad_screen"
+        tools:layout="@layout/fragment_agregar_propiedad_screen" >
+        <action
+            android:id="@+id/action_agregarPropiedadScreenFragment_to_profileScreenFragment"
+            app:destination="@id/profileScreenFragment" />
+        <action
+            android:id="@+id/action_agregarPropiedadScreenFragment_to_agregarFotosFragment"
+            app:destination="@id/agregarFotosFragment" />
+        <action
+            android:id="@+id/action_agregarPropiedadScreenFragment_to_profileScreenFragment2"
+            app:destination="@id/profileScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailScreenFragment"
+        android:name="com.gsoft.blogapp.ui.detail.DetailScreenFragment"
+        android:label="fragment_detail_screen"
+        tools:layout="@layout/fragment_detail_screen" />
+    <fragment
+        android:id="@+id/agregarFotosFragment"
+        android:name="com.gsoft.blogapp.ui.agregarPropiedad.AgregarFotosFragment"
+        android:label="fragment_agregar_fotos"
+        tools:layout="@layout/fragment_agregar_fotos" >
+        <action
+            android:id="@+id/action_agregarFotosFragment_to_buscarEnMapaFragment"
+            app:destination="@id/buscarEnMapaFragment" />
+        <action
+            android:id="@+id/action_agregarFotosFragment_to_agregarPropiedadScreenFragment"
+            app:destination="@id/agregarPropiedadScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buscarEnMapaFragment"
+        android:name="com.gsoft.blogapp.ui.agregarPropiedad.BuscarEnMapaFragment"
+        android:label="fragment_buscar_en_mapa"
+        tools:layout="@layout/fragment_buscar_en_mapa" >
+        <action
+            android:id="@+id/action_buscarEnMapaFragment_to_agregarFotosFragment"
+            app:destination="@id/agregarFotosFragment" />
+        <action
+            android:id="@+id/action_buscarEnMapaFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagarFragment"
+        android:name="com.gsoft.blogapp.ui.agregarPropiedad.PagarFragment"
+        android:label="fragment_pagar"
+        tools:layout="@layout/fragment_pagar" >
+        <action
+            android:id="@+id/action_pagarFragment_to_profileScreenFragment"
+            app:destination="@id/profileScreenFragment" />
+        <action
+            android:id="@+id/action_pagarFragment_to_buscarEnMapaFragment"
+            app:destination="@id/buscarEnMapaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.gsoft.blogapp.ui.agregarPropiedad.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_pagarFragment"
+            app:destination="@id/pagarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todasMapa"
+        android:name="com.gsoft.blogapp.ui.mapa.TodasMapa"
+        android:label="fragment_todas_mapa"
+        tools:layout="@layout/fragment_todas_mapa" >
+        <action
+            android:id="@+id/action_todasMapa_to_detailScreenFragment"
+            app:destination="@id/detailScreenFragment" />
+    </fragment>
+</navigation>

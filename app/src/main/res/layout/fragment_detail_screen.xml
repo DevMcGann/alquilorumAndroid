@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".ui.detail.DetailScreenFragment">
+
+
+    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        android:id="@+id/carousel"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginBottom="331dp"
+        android:background="#4E4C4C"
+        android:backgroundTint="#6E6C6C"
+        app:bottomShadowAlpha="0.6"
+        app:bottomShadowHeight="64dp"
+        app:carouselBackground="#4E4C4C"
+        app:imageScaleType="fitCenter"
+        app:indicatorMargin="0dp"
+        app:itemLayout="@layout/item_carousel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showBottomShadow="true"
+        app:showIndicator="true"
+        app:showNavigationButtons="true"
+        app:showTopShadow="true"
+        app:topShadowAlpha="0.6"
+        app:topShadowHeight="32dp" >
+
+    </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
+
+    <TextView
+        android:id="@+id/tdirecciondetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="276dp"
+        android:text="Dirección 1456"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tdescripciondetalle"
+        android:layout_width="325dp"
+        android:layout_height="143dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:text="Casa restaurada a nueva, dos habitaciones, dos baños completos, cocina, comedor, living, patio con verde y pileta, quincho con parrilla. Todos los servicios. Amoblada"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tdirecciondetalle"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/tcontactodetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2477354433"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tdescripciondetalle"
+        app:layout_constraintStart_toStartOf="@+id/tdescripciondetalle"
+        app:layout_constraintTop_toBottomOf="@+id/tdescripciondetalle"
+        app:layout_constraintVertical_bias="0.827" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="72dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="14dp"
+        android:src="@android:drawable/ic_menu_call"
+        app:layout_constraintBottom_toTopOf="@+id/tcontactodetalle"
+        app:layout_constraintEnd_toEndOf="@+id/tdescripciondetalle"
+        app:layout_constraintStart_toStartOf="@+id/tdescripciondetalle"
+        app:layout_constraintTop_toBottomOf="@+id/tdescripciondetalle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
